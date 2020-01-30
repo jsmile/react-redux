@@ -13,18 +13,24 @@ const App = () =>
 {
   const labelText = 'Enter your name : ';
   const buttonStyle = { backgroundColor: 'orange', color: 'dark-gray' };
-  const buttonText1 = 'Click me 1 !';               // javascript String
-  const buttonText2 = { text: 'Click me 2 !' };   // javascript object
+  const buttonText1 = 'Click me 1 !, ';             // javascript String
+  const buttonText2 = { text: 'Click me 2 !, ' };   // javascript object
+  const buttonText3 = [ 'Hi', 'there, '];           // javascript array
+  const buttonText4 = [ 123, 456 ];                 // javascript array
   
 
+  // Objects are not valid as a React child
+  // but objects are valid as an attribute
   return (
     <div>
       <label className="label" htmlFor="name">{labelText}</label>
       <input id="name" type="text" />
-      <button style={buttonStyle}>
+      <button style={buttonStyle}>    {/* as an attribute : object is O.K. */}
         {getButtonText()}
         {buttonText1}
-        {buttonText2.text}
+        {buttonText2.text}            {/* as an React child : not object */}
+        {buttonText3}
+        {buttonText4}
       </button>
     </div>
   );
