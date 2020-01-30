@@ -9,7 +9,20 @@ import ReactDOM from 'react-dom';
 // }
 const App = () => 
 {
-  return <div>Hello, World !</div>;
+  return (
+    <div>
+      <label class="label" for="name">Enter you name</label>
+      <input id="name" type="text" />
+      <button style={{ backgroundColor: 'orange', color: 'white' }}>submit</button>
+    </div>
+  );
+  // classical expression of html
+  // return <div>
+  //   <label class="label" for="name">Enter you name</label>
+  //   <input id="name" type="text" />
+  //   <button style="background-color: orange; color: white">submit</button>
+  //   <button style={{ backgroundColor: 'orange', color: 'white' }}>submit</button>
+  // </div>;
 };
 
 // Take the react component and show it on the screen.
