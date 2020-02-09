@@ -19,7 +19,7 @@ const CommentDetail = ( props ) =>
         </div>
         <div className="text">{props.text}</div>
       </div>
-    </div>
+    </div>    
   );
 }
 
